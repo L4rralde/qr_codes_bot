@@ -4,6 +4,8 @@ Handles all data required to idenfity a passenger
 
 import pandas as pd
 
+from misc import GIT_ROOT
+
 class Amigo:
     """
     Class of a Passenger friend
@@ -22,7 +24,7 @@ class Amigo:
         Amigo.save_db()
 
     @staticmethod
-    def save_db(path: str = "data.csv") -> None:
+    def save_db(path: str = f"{GIT_ROOT}/src/data.csv") -> None:
         """Saves list of Amigos into a csv file (database)"""
         d = {
             "Name": [amigo.name for amigo in Amigo.amigos],
@@ -32,7 +34,7 @@ class Amigo:
         df.to_csv(path)
 
     @staticmethod
-    def load_db(path: str = "data.csv") -> list:
+    def load_db(path: str = f"{GIT_ROOT}/src/data.csv") -> list:
         """Loads list of Amigos from csv file (database)"""
         Amigo.amigos = []
         df = pd.read_csv(path)
