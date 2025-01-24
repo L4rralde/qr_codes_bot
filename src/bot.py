@@ -2,6 +2,8 @@
 Code to run a telegram bot which generates an image with aggregated qr co
 """
 
+import os
+
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -9,6 +11,10 @@ from my_secrets import BOT_TOKEN
 from db import AMIGOS
 from generate_qr import generate_agg_qr, AmigoQR
 from misc import GIT_ROOT
+
+#Add missing dirs
+if not os.path.exists(f"{GIT_ROOT}/images"):
+    os.makedirs(f"{GIT_ROOT}/images")
 
 # Initialize the bot
 bot = telebot.TeleBot(BOT_TOKEN)
