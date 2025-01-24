@@ -19,3 +19,9 @@ Replace `BOT_TOKEN` in `src/my_secrets.py`
 ```python
 python src/bot.py
 ```
+
+4. Enjoy!
+
+Open your bot on telegram and start chatting.
+
+![bot](media/test.jpg "BOT")
