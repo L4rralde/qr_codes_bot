@@ -1,3 +1,4 @@
 pillow==10.4.0
 segno
 pandas==2.2.3
+pyTelegramBotAPI==4.26.0
